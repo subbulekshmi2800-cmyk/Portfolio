@@ -1,0 +1,1073 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- devicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        .glow {
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+        }
+    </style>
+</head>
+
+<body class="scroll-smooth">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full top-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
+
+        <div class="max-w-8xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <h1 class="text-2xl font-bold text-purple-400">
+                Portfolio
+            </h1>
+
+            <ul class="hidden md:flex gap-8 text-gray-300">
+
+                <li>
+                    <a href="#home" class="hover:text-purple-400 transition">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about" class="hover:text-purple-400 transition">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills" class="hover:text-purple-400 transition">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="hover:text-purple-400 transition">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="hover:text-purple-400 transition">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- MOBILE MENU ICON -->
+            <i id="menu-icon" class='bx bx-menu text-3xl md:hidden cursor-pointer'></i>
+            <ul id="mobile-menu"
+                class="hidden absolute right-6 top-20 bg-black/95 backdrop-blur-md p-6 rounded-2xl flex flex-col gap-4 text-white shadow-lg md:hidden">
+                >
+
+                <li>
+                    <a href="#home" class="hover:text-purple-400 transition">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about" class="hover:text-purple-400 transition">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- HERO SECTION -->
+    <section id="home" class="bg-[#0f172a] min-h-screen overflow-hidden">
+
+        <!-- ================= MOBILE VIEW ================= -->
+        <div class="block md:hidden">
+
+            <!-- IMAGE -->
+            <div class="w-full h-[420px] relative">
+
+                <img src="{% static 'images/f3.png' %}" alt="profile"
+                    class="absolute  right-0 top-6 w-full h-full object-cover object-top">
+
+                <!-- OPTIONAL DARK OVERLAY -->
+                <div class="absolute inset-0 bg-black/20"></div>
+
+            </div>
+
+            <!-- TEXT CONTENT -->
+            <div class="px-6 py-10 text-center">
+
+                <p class="text-purple-400 text-lg mb-3">
+                    Hello, I'm
+                </p>
+
+                <h1 class="text-4xl font-bold text-white leading-tight">
+                    SUBBULEKSHMI
+                </h1>
+
+                <!-- TYPING TEXT -->
+                <div class="mt-5 text-xl font-semibold">
+
+                    <span id="typing-mobile" class="text-gray-300"></span>
+
+                    <span class="text-purple-400 animate-pulse">|</span>
+
+                </div>
+
+                <!-- DESCRIPTION -->
+                <p class="mt-6 text-gray-400 leading-7">
+
+                    I build modern responsive websites with
+                    beautiful frontend interfaces, scalable backend
+                    systems, and efficient database management.
+
+                </p>
+
+                <!-- BUTTONS -->
+                <div class="mt-8 flex flex-col gap-4">
+
+                    <button onclick="downloadCV()"
+                        class="bg-purple-500 hover:bg-purple-600 px-7 py-3 rounded-2xl font-medium transition duration-300">
+
+                        Download CV
+
+                    </button>
+
+                    <a href="#contact"
+                        class="border border-purple-500 hover:bg-purple-500/10 px-7 py-3 rounded-2xl font-medium transition duration-300">
+
+                        Contact Me
+
+                    </a>
+
+                </div>
+
+                <!-- SOCIAL ICONS -->
+                <div class="flex justify-center gap-6 mt-8 text-3xl text-white">
+
+                    <a href="https://github.com/subbulekshmi2800-cmyk" target="_blank"
+                        class="hover:text-purple-400 transition">
+
+                        <i class='bx bxl-github'></i>
+
+                    </a>
+
+                    <a href="https://linkedin.com/in/subbulekshmi-t-323a50398" target="_blank"
+                        class="hover:text-purple-400 transition">
+
+                        <i class='bx bxl-linkedin'></i>
+
+                    </a>
+
+                    <a href="#" target="_blank" class="hover:text-purple-400 transition">
+
+                        <i class='bx bxl-instagram'></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DESKTOP VIEW ================= -->
+        <div class="hidden md:block relative min-h-screen">
+
+            <!-- FULL IMAGE -->
+            <div class="absolute right-0 top-0 h-full w-full">
+
+                <img src="{% static 'images/f3.png' %}" alt="profile"
+                    class="absolute right-0 top-0 h-full w-full object-cover object-right">
+
+                <!-- DARK OVERLAY -->
+                <div class="absolute inset-0 bg-gradient-to-r from-[#0f172a] to-transparent">
+                </div>
+
+            </div>
+
+            <!-- TEXT CONTENT -->
+            <div class="relative z-10 flex items-center min-h-screen px-6 md:px-16">
+
+                <div class="max-w-2xl">
+
+                    <p class="text-purple-400 text-lg mb-4">
+                        Hello, I'm
+                    </p>
+
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white">
+
+                        SUBBULEKSHMI
+
+                    </h1>
+
+                    <!-- TYPING TEXT -->
+                    <div class="mt-6 text-2xl md:text-4xl font-semibold">
+
+                        <span id="typing" class="text-gray-300"></span>
+
+                        <span class="text-purple-400 animate-pulse">|</span>
+
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <p class="mt-8 text-gray-400 leading-8 max-w-xl">
+
+                        I build modern responsive websites with
+                        beautiful frontend interfaces, scalable backend
+                        systems, and efficient database management.
+
+                    </p>
+
+                    <!-- BUTTONS -->
+                    <div class="mt-10 flex flex-wrap gap-5">
+
+                        <button onclick="downloadCV()"
+                            class="bg-purple-500 hover:bg-purple-600 px-7 py-3 rounded-2xl font-medium transition duration-300">
+
+                            Download CV
+
+                        </button>
+
+                        <a href="#contact"
+                            class="border border-purple-500 hover:bg-purple-500/10 px-7 py-3 rounded-2xl font-medium transition duration-300">
+
+                            Contact Me
+
+                        </a>
+
+                    </div>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="flex gap-6 mt-10 text-3xl text-white">
+
+                        <a href="https://github.com/subbulekshmi2800-cmyk" target="_blank"
+                            class="hover:text-purple-400 transition">
+
+                            <i class='bx bxl-github'></i>
+
+                        </a>
+
+                        <a href="https://linkedin.com/in/subbulekshmi-t-323a50398" target="_blank"
+                            class="hover:text-purple-400 transition">
+
+                            <i class='bx bxl-linkedin'></i>
+
+                        </a>
+
+                        <a href="#" target="_blank" class="hover:text-purple-400 transition">
+
+                            <i class='bx bxl-instagram'></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="relative py-32 px-6 bg-[#111827] overflow-hidden">
+
+        <!-- BACKGROUND GLOW -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-500/10 blur-[120px] rounded-full">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto">
+
+            <!-- SECTION TITLE -->
+            <div class="text-center mb-20 transition duration-700 hover:-translate-y-1">
+
+                <p class="text-purple-400 tracking-[4px] uppercase mb-4">
+                    Get To Know More
+                </p>
+
+                <h2 class="text-5xl md:text-6xl font-bold text-white">
+                    About Me
+                </h2>
+
+            </div>
+
+            <!-- MAIN CARD -->
+            <div
+                class="group bg-white/5 border border-white/10 backdrop-blur-xl rounded-[40px] p-8 md:p-14 transition duration-500 hover:border-purple-500/40 hover:shadow-[0_0_60px_rgba(168,85,247,0.15)]">
+
+                <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+                    <!-- LEFT SIDE CARDS -->
+                    <div class="space-y-6">
+
+
+                        <h3 class="text-3xl md:text-4xl font-bold leading-tight text-white -ml-2">
+
+                            Turning Ideas Into
+                            <span class="text-purple-400">
+                                Modern Digital Experiences
+                            </span>
+
+                        </h3>
+
+                        <!-- CARD -->
+                        <div
+                            class="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition duration-500 hover:bg-purple-500/10 hover:-translate-y-1">
+
+                            <div
+                                class="w-14 h-14 flex items-center justify-center rounded-xl bg-purple-500/20 text-purple-400 text-2xl">
+
+                                <i class='bx bx-code-alt'></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-xl font-semibold text-white">
+                                    Full Stack Development
+                                </h3>
+
+                                <p class="text-gray-400 text-sm mt-1">
+                                    Building responsive and modern web applications
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD -->
+                        <div
+                            class="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition duration-500 hover:bg-purple-500/10 hover:-translate-y-1">
+
+                            <div
+                                class="w-14 h-14 flex items-center justify-center rounded-xl bg-purple-500/20 text-purple-400 text-2xl">
+
+                                <i class='bx bx-layout'></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-xl font-semibold text-white">
+                                    UI / UX Focus
+                                </h3>
+
+                                <p class="text-gray-400 text-sm mt-1">
+                                    Creating clean and engaging user experiences
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD -->
+                        <div
+                            class="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition duration-500 hover:bg-purple-500/10 hover:-translate-y-1">
+
+                            <div
+                                class="w-14 h-14 flex items-center justify-center rounded-xl bg-purple-500/20 text-purple-400 text-2xl">
+
+                                <i class='bx bx-brain'></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-xl font-semibold text-white">
+                                    Problem Solving
+                                </h3>
+
+                                <p class="text-gray-400 text-sm mt-1">
+                                    Analytical thinking with a creative mindset
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT SIDE CONTENT -->
+
+                    <div class="space-y-8 text-gray-300">
+                        <p class="leading-9 text-lg text-gray-400 transition duration-500 hover:text-gray-200">
+
+                            Hi, I'm
+                            <span class="text-white font-semibold">
+                                Subbulekshmi
+                            </span>,
+                            a passionate and self-driven aspiring Full Stack
+                            Developer focused on building modern, responsive,
+                            and user-friendly web applications.
+
+                        </p>
+
+                        <p class="leading-9 text-lg text-gray-400 transition duration-500 hover:text-gray-200">
+
+                            I enjoy creating clean frontend interfaces,
+                            developing scalable backend systems, and
+                            transforming ideas into interactive digital
+                            experiences using technologies like
+                            <span class="text-purple-300">
+                                HTML, CSS, JavaScript, Python, Django,
+                                and modern frontend frameworks.
+                            </span>
+
+                            My interest lies in building applications that
+                            are both visually appealing and functionally
+                            efficient.
+
+                        </p>
+
+                        <p class="leading-9 text-lg text-gray-400 transition duration-500 hover:text-gray-200">
+
+                            I’m continuously exploring new technologies,
+                            improving my development skills, and learning
+                            modern concepts in full-stack development,
+                            databases, cloud technologies, and AI-driven
+                            applications.
+
+                            Coming from a postgraduate background in
+                            <span class="text-purple-400 font-medium">
+                                Physics
+                            </span>,
+                            I developed strong analytical thinking and
+                            problem-solving abilities that now help me
+                            approach software development with creativity
+                            and precision.
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 px-6">
+
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Skills
+            </h2>
+
+            <div class="grid sm:grid-cols-3 md:grid-cols-4 gap-8">
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-html5-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        HTML
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-css3-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        CSS
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i
+                        class="devicon-bootstrap-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        Bootstrap
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i
+                        class="devicon-tailwindcss-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        Tailwind CSS
+                    </h3>
+
+                </div>
+
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i
+                        class="devicon-javascript-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        JavaScript
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-java-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        Java
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-python-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        Python
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-mysql-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        MySQL
+                    </h3>
+
+                </div>
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-postman-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        Postman
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-spring-plain colored text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        Springboot
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-flask-original  text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        Flask
+                    </h3>
+
+                </div>
+
+                <!-- CARD -->
+
+                <!--<div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="devicon-django-plain  text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        Django
+                    </h3>
+
+                </div>-->
+
+
+                <!-- CARD -->
+                {% for skill in skills %}
+                <div
+                    class="group bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-purple-500 transition duration-300 hover:-translate-y-2">
+
+                    <i class="{{ skill.class_name }} text-6xl group-hover:scale-110 transition duration-300"></i>
+
+                    <h3 class="text-2xl font-semibold mt-5 text-white">
+                        {{ skill.name }}
+                    </h3>
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-32 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- TITLE -->
+            <div class="text-center mb-20">
+
+                <p class="text-purple-400 tracking-[4px] uppercase mb-4">
+                    My Works
+                </p>
+
+                <h2 class="text-5xl md:text-6xl font-bold text-white">
+                    Projects
+                </h2>
+
+            </div>
+
+            <!-- PROJECT GRID -->
+            <div id="projectContainer" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- PROJECT CARD -->
+                {% for project in projects %}
+                <div class="group relative overflow-hidden rounded-[30px] border border-white/10 bg-white/5">
+
+                    <!-- IMAGE -->
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}"
+                        class="w-full h-[450px] object-cover transition duration-700 group-hover:scale-110">
+
+                    <!-- OVERLAY -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
+
+                        <!-- CONTENT -->
+                        <h3 class="text-3xl font-bold text-white">
+                            {{ project.title }}
+                        </h3>
+
+                        <p class="text-gray-300 mt-4 leading-7">
+                            {{ project.description }}
+                        </p>
+
+                        <!-- TECH STACK -->
+                        <div class="flex flex-wrap gap-3 mt-5">
+
+                            {% for tech in project.tech_stack.all %}
+                            <span class="px-4 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm">
+                                {{ tech.name }}
+                            </span>
+                            {% endfor %}
+
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="flex gap-4 mt-7">
+
+                            <!-- OPEN PROJECT -->
+                            {% if project.live_link %}
+                            <a href="{{ project.live_link }}" target="_blank"
+                                class="px-6 py-3 rounded-xl bg-purple-500 hover:bg-purple-600 transition duration-300">
+
+                                View Project
+
+                            </a>
+                            {% endif %}
+
+                            <!-- GITHUB -->
+                            {% if project.github_link %}
+                            <a href="{{ project.github_link }}" target="_blank"
+                                class="px-6 py-3 rounded-xl border border-white/20 hover:border-purple-500 transition duration-300">
+
+                                GitHub
+
+                            </a>
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative py-32 px-6 overflow-hidden bg-[#050816]">
+
+        <!-- BLUR LIGHTS -->
+        <div class="absolute top-[-100px] left-[-100px] w-[350px] h-[350px] bg-purple-600/30 blur-[140px] rounded-full">
+        </div>
+
+        <div
+            class="absolute bottom-[-100px] right-[-100px] w-[350px] h-[350px] bg-pink-500/20 blur-[140px] rounded-full">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+
+            <!-- HEADING -->
+            <div class="text-center mb-24">
+
+                <p
+                    class="inline-block px-6 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 tracking-[4px] uppercase text-sm">
+
+                    Let's Work Together
+
+                </p>
+
+                <h2 class="mt-8 text-5xl md:text-7xl font-black leading-tight text-white">
+
+                    Get In
+
+                    <span
+                        class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+
+                        Touch
+
+                    </span>
+
+                </h2>
+
+                <p class="max-w-2xl mx-auto text-gray-400 mt-8 text-lg leading-8">
+
+                    I create modern premium websites, smooth UI experiences,
+                    and powerful full-stack applications.
+
+                </p>
+
+            </div>
+
+            <!-- MAIN BOX -->
+            <div
+                class="grid lg:grid-cols-5 rounded-[40px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-2xl shadow-2xl shadow-purple-500/10">
+
+                <!-- LEFT -->
+                <div
+                    class="lg:col-span-2 p-10 lg:p-12 border-b lg:border-b-0 lg:border-r border-white/10 bg-gradient-to-br from-purple-600/20 via-transparent to-pink-500/10">
+
+                    <h3 class="text-4xl font-bold text-white leading-tight">
+
+                        Have An Idea?
+                        <br>
+                        Let's Make It Real.
+
+                    </h3>
+
+                    <p class="text-gray-400 mt-6 leading-8">
+
+                        Available for freelance work,
+                        collaborations, startups,
+                        and creative projects worldwide.
+
+                    </p>
+
+                    <!-- CONTACT INFO -->
+                    <div class="space-y-6 mt-12">
+
+                        <!-- EMAIL -->
+                        <div
+                            class="flex items-center gap-5 p-5 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition duration-300">
+
+                            <div
+                                class="min-w-[64px] h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center text-3xl text-purple-400">
+
+                                <i class='bx bx-mail-send'></i>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-gray-400 text-sm">
+                                    Email Me
+                                </p>
+
+                                <h4 class="text-white text-md font-semibold break-all">
+                                    Subbulekshmi2800@gmail.com
+                                </h4>
+
+                            </div>
+
+                        </div>
+
+                        <!-- PHONE -->
+                        <div
+                            class="flex items-center gap-5 p-5 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition duration-300">
+
+                            <div
+                                class="min-w-[64px] h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center text-3xl text-purple-400">
+
+                                <i class='bx bx-phone-call'></i>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-gray-400 text-sm">
+                                    Call Me
+                                </p>
+
+                                <h4 class="text-white text-lg font-semibold">
+                                    +91 9876543210
+                                </h4>
+
+                            </div>
+
+                        </div>
+
+                        <!-- LOCATION -->
+                        <div
+                            class="flex items-center gap-5 p-5 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 transition duration-300">
+
+                            <div
+                                class="min-w-[64px] h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center text-3xl text-purple-400">
+
+                                <i class='bx bx-current-location'></i>
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-gray-400 text-sm">
+                                    Location
+                                </p>
+
+                                <h4 class="text-white text-lg font-semibold">
+                                    Chennai, India
+                                </h4>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SOCIAL -->
+                    <div class="flex gap-5 mt-12">
+
+                        <a href="#"
+                            class="w-14 h-14 rounded-2xl border border-white/10 bg-white/5 hover:bg-purple-500 transition duration-300 flex items-center justify-center text-white text-2xl">
+
+                            <i class="devicon-github-original"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="w-14 h-14 rounded-2xl border border-white/10 bg-white/5 hover:bg-blue-500 transition duration-300 flex items-center justify-center text-white text-2xl">
+
+                            <i class="devicon-linkedin-plain"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="w-14 h-14 rounded-2xl border border-white/10 bg-white/5 hover:bg-pink-500 transition duration-300 flex items-center justify-center text-white text-2xl">
+
+                            <i class='bx bxl-instagram'></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+                <!-- MESSAGE SUCESSFUL-->
+                <div class="lg:col-span-3 p-10 lg:p-14">
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="mb-6 p-4 rounded-2xl bg-green-500/20 border border-green-500 text-green-300">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+
+                    <form method="POST" class="space-y-7">
+
+                        {% csrf_token %}
+
+                        <!-- NAME + EMAIL -->
+                        <div class="grid md:grid-cols-2 gap-6">
+
+                            <div>
+                                <label class="text-sm uppercase tracking-[2px] text-gray-400 block mb-3">
+                                    Full Name
+                                </label>
+
+                                <div class="relative">
+
+                                    <i
+                                        class='bx bx-user absolute left-5 top-1/2 -translate-y-1/2 text-purple-400 text-2xl'></i>
+
+                                    {{ form.name }}
+
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="text-sm uppercase tracking-[2px] text-gray-400 block mb-3">
+                                    Email Address
+                                </label>
+
+                                <div class="relative">
+
+                                    <i
+                                        class='bx bx-envelope absolute left-5 top-1/2 -translate-y-1/2 text-purple-400 text-2xl'></i>
+
+                                    {{ form.email }}
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- SUBJECT -->
+                        <div>
+
+                            <label class="text-sm uppercase tracking-[2px] text-gray-400 block mb-3">
+
+                                Subject
+
+                            </label>
+
+                            <div class="relative">
+
+                                <i
+                                    class='bx bx-edit absolute left-5 top-1/2 -translate-y-1/2 text-purple-400 text-2xl'></i>
+
+                                {{ form.subject }}
+
+                            </div>
+
+                        </div>
+
+                        <!-- MESSAGE -->
+                        <div>
+
+                            <label class="text-sm uppercase tracking-[2px] text-gray-400 block mb-3">
+
+                                Your Message
+
+                            </label>
+
+                            <div class="relative">
+
+                                <i class='bx bx-message-square-dots absolute left-5 top-6 text-purple-400 text-2xl'></i>
+
+                                {{ form.message }}
+
+                            </div>
+
+                        </div>
+
+                        <!-- BUTTON -->
+                        <button
+                            class="w-full h-16 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 text-white font-semibold text-lg transition duration-300 hover:scale-[1.01] shadow-lg shadow-purple-500/30">
+
+                            <span class="flex items-center justify-center gap-3">
+
+                                Send Message
+
+                                <i class='bx bx-send text-2xl'></i>
+
+                            </span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
